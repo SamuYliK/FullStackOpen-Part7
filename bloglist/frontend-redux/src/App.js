@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Routes, Route, useMatch, useNavigate } from 'react-router-dom'
 import { Container } from '@mui/material'
@@ -49,8 +49,6 @@ const App = () => {
     }
   }, [])
 
-  const blogFormRef = useRef()
-
   const logOut = () => {
     window.localStorage.removeItem('loggedBlogappUser')
     dispatch(
@@ -83,7 +81,7 @@ const App = () => {
           element={
             <div>
               <div>
-                <Togglable buttonLabel="create new blog" ref={blogFormRef}>
+                <Togglable buttonLabel="create new blog">
                   <BlogForm />
                 </Togglable>
               </div>
