@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate, Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import { List, ListItem, Button, TextField } from '@mui/material'
 import DeleteIcon from '@mui/icons-material/Delete'
@@ -73,7 +73,7 @@ const Blog = ({ blog }) => {
           like
         </Button>
       </div>
-      <div>Added by user: {blog.user.name}</div>
+      <div>Added by user: {blog.user.username}</div>
       <h3>comments</h3>
       <form onSubmit={addComment}>
         <div>
